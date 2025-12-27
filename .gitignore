@@ -1,2 +1,6 @@
 id_ed25519_github
 id_ed25519_github.pub
+*.pem
+*.key
+*.rsa
+id_ed25519*
