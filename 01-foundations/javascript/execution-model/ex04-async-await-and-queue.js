@@ -7,7 +7,9 @@
 // 4. Write the actual result & short explanation.
 //
 // My prediction:
-// 1, 2, 4, 6, 3, 5
+// 1, 2, 4, 6, 7, 3, 5
+// Actual result:
+// 1, 2, 4, 6, 7, 5, 3
 // (fill here before running)
 
 console.log("1: start");
@@ -15,7 +17,11 @@ console.log("1: start");
 async function demo() {
   console.log("2: inside async function, before await");
 
-  await Promise.resolve();
+  await Promise.resolve()
+  .then(() => {
+    console.log("7: promise then inside async function");
+  });
+
   console.log("3: inside async function, after await");
 }
 
@@ -35,6 +41,7 @@ console.log("6: end");
 // 2: inside async function, before await
 // 4: after calling demo()
 // 6: end
-// 3: inside async function, after await
+// 7: promise then inside async function
 // 5: promise then outside
+// 3: inside async function, after await
 //
