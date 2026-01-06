@@ -95,9 +95,80 @@ This repository documents my 2–3 year path toward becoming a Senior Web Develo
 - ❌ Snapshot tests carefully
 - ❌ Create real test strategy
 
-## Phase 3 — Backend & System Knowledge
+## Phase 3 — Architecture & Advanced Concepts
 
-### 8. Backend Fundamentals (Node.js)
+### 8. Software Architecture
+
+- 📚 SOLID principles
+- ❌ Separation of concerns & layering
+- ❌ Clean architecture concepts
+- ❌ Feature-based organization
+- ❌ Dependency injection conceptually
+- ❌ Boundaries between modules/APIs/components
+- ❌ Architecture decision records (ADR)
+
+### 9. Design Patterns
+
+- ❌ Creational: Factory/Singleton/Builder
+- ❌ Structural: Adapter/Decorator/Facade/Proxy
+- ❌ Behavioral: Strategy/Observer/Command
+- ❌ Repository pattern
+- ❌ Recognize patterns naturally
+- ❌ Refactoring without overengineering
+
+### 10. System Design
+
+- ❌ Architecture diagrams
+- ❌ Scalability (vertical/horizontal)
+- ❌ Load balancing & reverse proxies
+- ❌ Message queues & event-driven systems
+- ❌ DB replication/sharding
+- ❌ Failure tolerance: timeouts/retries/circuit breakers
+- ❌ Design sample apps (chat/feed/learning platform)
+
+### 11. DevOps Awareness
+
+- ❌ Monitoring & logging
+- ❌ Metrics: latency/throughput/errors/uptime
+- ❌ Tools: Sentry/Prometheus/Grafana
+- ❌ Blue-green/canary deploys
+- ❌ Rollbacks & incident response
+
+## Phase 4 — Computer Science Core
+
+- ❌ Big-O complexity
+- ❌ Arrays/lists operations cost
+- ❌ Stacks/queues basics
+- ❌ Hash maps & collisions (high-level)
+- ❌ Trees/graphs overview
+- ❌ Basic algorithms (search/sort)
+- ❌ Recursion & iterative conversion
+- ❌ When performance matters
+
+## Phase 5 — Senior Soft Skills
+
+- ❌ Write readable, maintainable code
+- ❌ Give & receive code reviews well
+- ❌ Break down features & estimate
+- ❌ Communicate with non-technical people
+- ❌ Document flows & decisions
+- ❌ Mentor juniors
+- ❌ Identify tech debt & improvements
+- ❌ Think in trade-offs & long-term impact
+
+## Phase 6 — Future-Proof Skills
+
+- ❌ Next.js mastery (routing, server components, data fetching)
+- ❌ Backend frameworks (NestJS, etc.)
+- ❌ Real-time (WebSockets/WebRTC basics)
+- ❌ AI integration basics (LLM APIs, embeddings)
+- ❌ WebAssembly overview
+- ❌ Cloud basics (AWS/GCP/Azure storage/compute/db)
+- ❌ Keep learning continuously
+
+## Phase 7 — Backend & System Knowledge
+
+### 12. Backend Fundamentals (Node.js)
 
 - ❌ Node runtime, event loop, non-blocking IO
 - ❌ Express/NestJS servers: routing, middleware
@@ -109,7 +180,7 @@ This repository documents my 2–3 year path toward becoming a Senior Web Develo
 - ❌ File upload handling
 - ❌ WebSockets basics
 
-### 9. Databases (SQL + NoSQL)
+### 13. Databases (SQL + NoSQL)
 
 - ❌ Relational DB basics
 - ❌ SQL queries (SELECT/INSERT/UPDATE/DELETE/JOIN)
@@ -121,7 +192,7 @@ This repository documents my 2–3 year path toward becoming a Senior Web Develo
 - ❌ Replication/sharding high-level
 - ❌ When to choose SQL vs NoSQL
 
-### 10. Performance & Caching
+### 14. Performance & Caching
 
 - ❌ Understand bottlenecks (network/backend/DB/frontend)
 - ❌ HTTP caching (Cache-Control, ETag)
@@ -131,7 +202,7 @@ This repository documents my 2–3 year path toward becoming a Senior Web Develo
 - ❌ DB performance tuning
 - ❌ Frontend bundle optimization
 
-### 11. Docker & Deployment
+### 15. Docker & Deployment
 
 - ❌ Images vs containers
 - ❌ Write Dockerfile for Node/React apps
@@ -139,77 +210,6 @@ This repository documents my 2–3 year path toward becoming a Senior Web Develo
 - ❌ Environment variables & config
 - ❌ CI/CD basics (testing/build pipelines)
 - ❌ Deployment to Vercel/Netlify/cloud
-
-## Phase 4 — Architecture & Advanced Concepts
-
-### 12. Software Architecture
-
-- 📚 SOLID principles
-- ❌ Separation of concerns & layering
-- ❌ Clean architecture concepts
-- ❌ Feature-based organization
-- ❌ Dependency injection conceptually
-- ❌ Boundaries between modules/APIs/components
-- ❌ Architecture decision records (ADR)
-
-### 13. Design Patterns
-
-- ❌ Creational: Factory/Singleton/Builder
-- ❌ Structural: Adapter/Decorator/Facade/Proxy
-- ❌ Behavioral: Strategy/Observer/Command
-- ❌ Repository pattern
-- ❌ Recognize patterns naturally
-- ❌ Refactoring without overengineering
-
-### 14. System Design
-
-- ❌ Architecture diagrams
-- ❌ Scalability (vertical/horizontal)
-- ❌ Load balancing & reverse proxies
-- ❌ Message queues & event-driven systems
-- ❌ DB replication/sharding
-- ❌ Failure tolerance: timeouts/retries/circuit breakers
-- ❌ Design sample apps (chat/feed/learning platform)
-
-### 15. DevOps Awareness
-
-- ❌ Monitoring & logging
-- ❌ Metrics: latency/throughput/errors/uptime
-- ❌ Tools: Sentry/Prometheus/Grafana
-- ❌ Blue-green/canary deploys
-- ❌ Rollbacks & incident response
-
-## Phase 5 — Computer Science Core
-
-- ❌ Big-O complexity
-- ❌ Arrays/lists operations cost
-- ❌ Stacks/queues basics
-- ❌ Hash maps & collisions (high-level)
-- ❌ Trees/graphs overview
-- ❌ Basic algorithms (search/sort)
-- ❌ Recursion & iterative conversion
-- ❌ When performance matters
-
-## Phase 6 — Senior Soft Skills
-
-- ❌ Write readable, maintainable code
-- ❌ Give & receive code reviews well
-- ❌ Break down features & estimate
-- ❌ Communicate with non-technical people
-- ❌ Document flows & decisions
-- ❌ Mentor juniors
-- ❌ Identify tech debt & improvements
-- ❌ Think in trade-offs & long-term impact
-
-## Phase 7 — Future-Proof Skills
-
-- ❌ Next.js mastery (routing, server components, data fetching)
-- ❌ Backend frameworks (NestJS, etc.)
-- ❌ Real-time (WebSockets/WebRTC basics)
-- ❌ AI integration basics (LLM APIs, embeddings)
-- ❌ WebAssembly overview
-- ❌ Cloud basics (AWS/GCP/Azure storage/compute/db)
-- ❌ Keep learning continuously
 
 ✅ - Good Understanding of the topic and all exercises are ready
 📚 - In Progress
