@@ -1,7 +1,7 @@
 # Senior Web Developer Roadmap – My Learning Journey
 
 This repository documents my 2–3 year path toward becoming a Senior Web Developer.
-test
+
 ## Goals
 
 # Senior Web Developer Roadmap — Progress Tracker
