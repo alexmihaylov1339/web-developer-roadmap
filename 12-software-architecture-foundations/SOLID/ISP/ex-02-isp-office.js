@@ -38,19 +38,42 @@ const createAllInOneDevice = (device = 'All-in-One Device') => {
     );
 }
 
+
+// ❌ Bad Client Code (This Is the Problem)
+
+function createOffice(device) {
+  // ❌ Office depends on EVERYTHING: power + print + scan
+
+  return {
+    printAndShutdown(document) {
+      device.turnOn();
+      device.print(document);   // 💥 crashes if device can't print
+      device.turnOff();
+    },
+
+    scanAndShutdown(document) {
+      device.turnOn();
+      device.scan(document);    // 💥 crashes if device can't scan
+      device.turnOff();
+    },
+  };
+}
+
+function printAndShutdown(device, document) {
+    device.turnOn();
+    device.print(document);
+    device.turnOff();
+}
+
+function scanAndShutdown(device, document) {
+    device.turnOn();
+    device.scan(document);
+    device.turnOff();
+}
+
 const printer = createPrinter();
-printer.turnOn();
-printer.print('My Document');
-printer.turnOff();
-
+Object.assign(printer, { printAndShutdown });
 const scanner = createScanner();
-scanner.turnOn();
-scanner.scan('My Document');
-scanner.turnOff();
-
 const allInOne = createAllInOneDevice();
-allInOne.turnOn();
-allInOne.print('My Document');
-allInOne.scan('My Document');
-allInOne.turnOff();
 
+printer.printAndShutdown('My Document');
