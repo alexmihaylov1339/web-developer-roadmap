@@ -38,42 +38,73 @@ const createAllInOneDevice = (device = 'All-in-One Device') => {
     );
 }
 
+const asPowerable = (device) => {
+    if (device.turnOn && device.turnOff) {
+        return {
+            turnOn: () => device.turnOn(),
+            turnOff: () => device.turnOff()
+        }
+    }
 
-// ❌ Bad Client Code (This Is the Problem)
-
-function createOffice(device) {
-  // ❌ Office depends on EVERYTHING: power + print + scan
-
-  return {
-    printAndShutdown(document) {
-      device.turnOn();
-      device.print(document);   // 💥 crashes if device can't print
-      device.turnOff();
-    },
-
-    scanAndShutdown(document) {
-      device.turnOn();
-      device.scan(document);    // 💥 crashes if device can't scan
-      device.turnOff();
-    },
-  };
+    throw new Error('Device does not support powering on/off');
 }
 
-function printAndShutdown(device, document) {
-    device.turnOn();
-    device.print(document);
-    device.turnOff();
+const asPrintable = (device) => {
+    if (device.print) {
+        return {
+            print: (document) => device.print(document)
+        }
+    }
+
+    throw new Error('Device does not support printing');
 }
 
-function scanAndShutdown(device, document) {
-    device.turnOn();
-    device.scan(document);
-    device.turnOff();
-}
+const asScannable = (device) => {
+    if (device.scan) {
+        return {
+            scan: (document) => device.scan(document)
+        }
+    }
+
+    throw new Error('Device does not support scanning');
+};
+
+const createPrintService = (printPort, powerPort) => ({
+    printAndTurnOff(document) {
+        powerPort.turnOn();
+        printPort.print(document);
+        powerPort.turnOff();
+    }
+});
+
+const createScanService = (scanPort, powerPort) => ({
+    scanAndTurnOff(document) {
+        powerPort.turnOn();
+        scanPort.scan(document);
+        powerPort.turnOff();
+    }
+});
 
 const printer = createPrinter();
-Object.assign(printer, { printAndShutdown });
 const scanner = createScanner();
 const allInOne = createAllInOneDevice();
 
-printer.printAndShutdown('My Document');
+const printerPower = asPowerable(printer);
+const printerPrint = asPrintable(printer);
+const printerPrintService = createPrintService(printerPrint, printerPower);
+printerPrintService.printAndTurnOff('My Document');
+
+const scannerPower = asPowerable(scanner);
+const scannerScan = asScannable(scanner);
+const scannerScanService = createScanService(scannerScan, scannerPower);
+scannerScanService.scanAndTurnOff('My Document');
+
+const allInOnePower = asPowerable(allInOne);
+const allInOnePrint = asPrintable(allInOne);
+const allInOneScan = asScannable(allInOne);
+
+const allInOnePrintService = createPrintService(allInOnePrint, allInOnePower);
+allInOnePrintService.printAndTurnOff('My Document');
+
+const allInOneScanService = createScanService(allInOneScan, allInOnePower);
+allInOneScanService.scanAndTurnOff('My Document');
