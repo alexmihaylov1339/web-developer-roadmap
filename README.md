@@ -24,8 +24,8 @@ This repository documents my 2–3 year path toward becoming a Senior Web Develo
 
 ### 2. TypeScript Deep Mastery
 
-- ❌ Type system basics, inference, strict checking
-- ❌ Type aliases vs interfaces
+- 📚 Type system basics, inference, strict checking
+- 📚 Type aliases vs interfaces
 - ❌ Type narrowing & guards (`typeof`, `instanceof`, `in`, custom guards)
 - ❌ Generics usage in functions/classes/components
 - ❌ Mapped & utility types (Partial, Pick, Omit, Record…)
